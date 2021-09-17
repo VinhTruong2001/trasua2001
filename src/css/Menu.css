@@ -1,0 +1,21 @@
+.menu__product {
+    height: 500px;
+    padding-top: 100%;
+}
+
+.menu__all-product-btn {
+    border: 2px solid black;
+}
+
+.product__name {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+@media (max-width: 739px) {
+    .menu__product {
+        height: 400px;
+    }
+}

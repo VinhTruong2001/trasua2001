@@ -1,0 +1,93 @@
+.homepage__nav-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    position: relative;
+    will-change: color;
+    transition: 0.5s;
+    scroll-behavior: smooth;
+}
+
+.homepage__nav-link:hover {
+    color: #fff;
+    will-change: color;
+    transition: 0.5s;
+}
+
+.homepage__nav-link span {
+    width: 200px;
+    text-align: right;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: ease-out 0.2s;
+    position: absolute;
+    right: 30px;
+}
+
+.homepage__nav-link:hover span {
+    opacity: 1;
+    transform: scaleX(1);
+    transition: ease-out 0.2s;
+}
+
+.homepage__nav-link.seperate {
+    margin: 120px 0;
+}
+
+.homepage__nav-link.seperate::before,
+.homepage__nav-link.seperate::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 3px;
+    height: 100px;
+    background-color: white;
+    cursor: default;
+    pointer-events: none;
+    will-change: background;
+    transition: 0.5s;
+}
+
+.homepage__nav-link.seperate::before {
+    top: -110px;
+}
+
+.homepage__nav-link.seperate::after {
+    bottom: -110px;
+}
+
+.homepage__nav-link.active,
+.homepage__nav-link.down.active, 
+.homepage__nav-link.down.active:hover {
+    color: #d3b674;
+    will-change: color;
+    transition: 0.5s;
+}
+
+.homepage__nav-link.active span {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.homepage__nav-link.down,
+.homepage__nav-link.down:hover {
+    color: #000;
+    will-change: color;
+    transition: 0.5s;
+}
+
+.homepage__nav-link.down.seperate::before,
+.homepage__nav-link.down.seperate::after {
+    background-color: #000;
+    will-change: background;
+    transition: 0.5s;
+}
+
+@media (min-width: 740px) {
+    #news {
+        height: calc(100vh - 280px);
+    }
+}

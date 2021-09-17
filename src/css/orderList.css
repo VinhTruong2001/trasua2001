@@ -1,0 +1,11 @@
+.order__product {
+    height: 330px;
+    padding-top: 100%;
+} 
+
+.product__name {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
